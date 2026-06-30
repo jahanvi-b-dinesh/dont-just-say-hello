@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Don't Just Say Hello In Chat</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --card-bg: #f8f9fa;
+            --accent: #e94560;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --chat-bg: #f1f3f4;
+            --timestamp: #6b7280;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(233, 69, 96, 0.3);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .tldr {
+            background: var(--card-bg);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 2rem;
+        }
+
+        .tldr-title {
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(233, 69, 96, 0.2);
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        .chat-example {
+            background: var(--chat-bg);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+
+        .chat-line {
+            padding: 0.3rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .timestamp {
+            color: var(--timestamp);
+            white-space: nowrap;
+        }
+
+        .user-you {
+            color: #2563eb;
+        }
+
+        .user-coworker {
+            color: #059669;
+        }
+
+        .chat-comment {
+            color: var(--accent);
+            font-style: italic;
+            padding: 0.5rem 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .highlight-box {
+            background: rgba(233, 69, 96, 0.1);
+            border: 1px solid rgba(233, 69, 96, 0.3);
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .dont-do {
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .dont-do code {
+            background: rgba(0, 0, 0, 0.08);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(233, 69, 96, 0.2);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.7rem;
+            }
+            
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            
+            .chat-example {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>😃 Please Don't Just Say Hello In Chat</h1>
+        </header>
+
+        <div class="tldr">
+            <div class="tldr-title">TL;DR</div>
+            <p style="margin-bottom: 0;">Modern chat communication should be done in a way that saves time for all participants and enables an efficient, asynchronous exchange of information. <strong>Don't expect an answer if you just write "Hello" in chat.</strong> Don't call someone out of the blue. Instead, phrase a message that allows your chat partners to provide a meaningful response as soon as they allocate time to read and answer your message.</p>
+        </div>
+
+        <h2>💬 Chat Etiquette</h2>
+
+        <div class="chat-example">
+            <div class="chat-line"><span class="timestamp">2010-07-19 12:32:12</span> <span class="user-you">you:</span> Hello</div>
+            <div class="chat-line"><span class="timestamp">2010-07-19 12:32:15</span> <span class="user-coworker">co-worker:</span> Hi.</div>
+            <div class="chat-comment"># CO-WORKER WAITS WHILE YOU PHRASE YOUR QUESTION</div>
+            <div class="chat-line"><span class="timestamp">2010-07-19 12:34:01</span> <span class="user-you">you:</span> I'm working on [something] and I'm trying to do [etc...]</div>
+            <div class="chat-line"><span class="timestamp">2010-07-19 12:35:21</span> <span class="user-coworker">co-worker:</span> Oh, that's [answer...]</div>
+        </div>
+
+        <p><strong>It's as if you called someone on the phone and said "Hello!" and then put them on hold!</strong></p>
+
+        <div class="highlight-box">
+            <p style="margin-bottom: 0.5rem;"><strong>✅ Please do this instead:</strong></p>
+            <div class="chat-example" style="margin: 1rem 0 0 0;">
+                <div class="chat-line"><span class="timestamp">2010-07-19 12:32:12</span> <span class="user-you">you:</span> Hello -- I'm working on [something] and I'm trying to do [etc...]</div>
+                <div class="chat-line"><span class="timestamp">2010-07-19 12:33:32</span> <span class="user-coworker">co-worker:</span> [answers question]</div>
+            </div>
+        </div>
+
+        <p>Note that you get help <strong>minutes sooner</strong>, and you don't make them wait. Instead, the co-worker can start thinking about your question right away!</p>
+
+        <p>You're trying to be polite by not jumping right into the request, like you would do in person or on the phone. But Chat is neither of those things. Typing is much slower than talking. Instead of being polite, you are just making the other person wait for you to phrase your question, which is lost productivity.</p>
+
+        <p class="dont-do">The same goes for <code>"Hello – Are you there?"</code>, <code>"Hi Bob – quick question."</code>, <code>"Do you have a sec?"</code>, <code>"yt?"</code> and <code>"ping"</code>. <strong>Just ask the question!</strong></p>
+
+        <p>If you feel it's brusque to simply say "Hi" and ask the question, you can do something like this:</p>
+
+        <div class="chat-example">
+            <div class="chat-line"><span class="timestamp">2010-07-19 12:32:12</span> <span class="user-you">you:</span> Hi -- if you're not busy I was wondering if I could ask a question. I'm working on [something] and I'm trying to do [etc...]</div>
+        </div>
+
+        <p>Additionally, asking your question before getting a reply allows <strong>asynchronous communication</strong>. If the other party is away, and you leave before they come back, they can still answer your question, instead of just staring at a "Hello" and wondering what they missed.</p>
+
+        <h2>📞 Call Etiquette</h2>
+
+        <p><strong>Don't call someone out of the blue.</strong> Respect that your desired call partner might be busy and in flow. Calling someone means you request immediate, full attention, interrupting any other activity.</p>
+
+        <p>Some people like to probe with an initial "hello" to verify whether the presence status shown is true, hoping they can determine whether the recipient is near a device, then will immediately follow up with a call. <strong>Don't do that either.</strong> If someone is able and willing to answer a chat message, it does not mean that they are also available for a voice or video call.</p>
+
+        <p>Instead of sending a call probe, or asking "hey, do you have time for a call?" (which is better but not great), you can try something like this:</p>
+
+        <div class="chat-example">
+            <div class="chat-line"><span class="timestamp">2020-07-08 12:32:12</span> <span class="user-you">you:</span> Hi - do you have X min for a quick call to talk about XYZ? [etc...]</div>
+        </div>
+
+        <p>This does three things: it <strong>time bounds</strong> the request, it gives the recipient some <strong>context</strong>, and it helps you <strong>remember</strong> what you wanted to talk about if the recipient can't or doesn't respond until later.</p>
+
+        <footer>
+            <p>Inspired by <a href="https://sbmueller.de/nohello/" target="_blank" rel="noopener">nohello</a></p>
+        </footer>
+    </div>
+</body>
+</html>
